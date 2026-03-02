@@ -159,6 +159,8 @@ The following diagram shows every tool you'll install and how they connect. Refe
 | What types of work do you need? | **Task** | Simple, clean work item type for this tutorial |
 | How do you track work? | **To Do, In Progress, Done** | The simplest effective workflow -- three clear states |
 
+   If Jira doesn't prompt you to create a project during onboarding, create one manually: [Create a new project](https://support.atlassian.com/jira-software-cloud/docs/create-a-new-project/). Choose the **Scrum** template and name it **E-Commerce Analytics**.
+
 7. After the project is created, verify the project **Key** is `ECOM`. The key is the prefix that appears on every issue (for example, `ECOM-1`, `ECOM-2`). Jira generates the key from the project name, so it may default to something like `SCRUM`, `ECO`, or `ECA` depending on when you changed the name. If the key isn't `ECOM`:
    - Click the gear icon or go to **Project settings**.
    - Navigate to **Details**.
