@@ -33,3 +33,15 @@ total_orders = len(df)
 col1, col2 = st.columns(2)
 col1.metric(label="Total Sales", value=f"${total_sales:,.0f}")
 col2.metric(label="Total Orders", value=f"{total_orders:,}")
+
+df["month"] = df["date"].dt.to_period("M").dt.to_timestamp()
+monthly = df.groupby("month")["total_amount"].sum().reset_index()
+
+fig_trend = px.line(
+    monthly,
+    x="month",
+    y="total_amount",
+    title="Sales Trend Over Time",
+    labels={"month": "Month", "total_amount": "Revenue ($)"},
+)
+st.plotly_chart(fig_trend, use_container_width=True)

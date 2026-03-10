@@ -72,8 +72,8 @@ Single-file structure: `app.py` at repository root + `data/sales-data.csv` (pre-
 
 ### Implementation for User Story 2
 
-- [ ] T013 [US2] Compute monthly revenue in `app.py`: `df["month"] = df["date"].dt.to_period("M").dt.to_timestamp()` then `monthly = df.groupby("month")["total_amount"].sum().reset_index()`
-- [ ] T014 [US2] Render "Sales Trend Over Time" line chart in `app.py` using `px.line(monthly, x="month", y="total_amount", title="Sales Trend Over Time", labels={"month": "Month", "total_amount": "Revenue ($)"})` and `st.plotly_chart(fig, use_container_width=True)` (FR-004)
+- [x] T013 [US2] Compute monthly revenue in `app.py`: `df["month"] = df["date"].dt.to_period("M").dt.to_timestamp()` then `monthly = df.groupby("month")["total_amount"].sum().reset_index()`
+- [x] T014 [US2] Render "Sales Trend Over Time" line chart in `app.py` using `px.line(monthly, x="month", y="total_amount", title="Sales Trend Over Time", labels={"month": "Month", "total_amount": "Revenue ($)"})` and `st.plotly_chart(fig, use_container_width=True)` (FR-004)
 
 **Checkpoint**: Line chart renders with 12 data points and hover tooltips. US1 + US2 both functional independently.
 
