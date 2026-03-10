@@ -24,3 +24,12 @@ except FileNotFoundError:
 if df.empty:
     st.error("No sales data found. Please check that data/sales-data.csv is present and contains records.")
     st.stop()
+
+st.title("Sales Performance Dashboard")
+
+total_sales = df["total_amount"].sum()
+total_orders = len(df)
+
+col1, col2 = st.columns(2)
+col1.metric(label="Total Sales", value=f"${total_sales:,.0f}")
+col2.metric(label="Total Orders", value=f"{total_orders:,}")

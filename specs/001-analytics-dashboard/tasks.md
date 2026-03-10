@@ -54,11 +54,11 @@ Single-file structure: `app.py` at repository root + `data/sales-data.csv` (pre-
 
 ### Implementation for User Story 1
 
-- [ ] T008 [US1] Add `st.title("Sales Performance Dashboard")` as the first visible element in `app.py` (FR-001)
-- [ ] T009 [US1] Compute `total_sales = df["total_amount"].sum()` and `total_orders = len(df)` in `app.py`
-- [ ] T010 [US1] Create two-column layout with `col1, col2 = st.columns(2)` in `app.py` for KPI cards
-- [ ] T011 [US1] Render "Total Sales" metric in `col1` in `app.py` using `st.metric(label="Total Sales", value=f"${total_sales:,.0f}")` (FR-002)
-- [ ] T012 [US1] Render "Total Orders" metric in `col2` in `app.py` using `st.metric(label="Total Orders", value=f"{total_orders:,}")` (FR-003)
+- [x] T008 [US1] Add `st.title("Sales Performance Dashboard")` as the first visible element in `app.py` (FR-001)
+- [x] T009 [US1] Compute `total_sales = df["total_amount"].sum()` and `total_orders = len(df)` in `app.py`
+- [x] T010 [US1] Create two-column layout with `col1, col2 = st.columns(2)` in `app.py` for KPI cards
+- [x] T011 [US1] Render "Total Sales" metric in `col1` in `app.py` using `st.metric(label="Total Sales", value=f"${total_sales:,.0f}")` (FR-002)
+- [x] T012 [US1] Render "Total Orders" metric in `col2` in `app.py` using `st.metric(label="Total Orders", value=f"{total_orders:,}")` (FR-003)
 
 **Checkpoint**: KPI cards visible, values match expected baselines. US1 is fully functional — deployable as a minimal dashboard.
 
