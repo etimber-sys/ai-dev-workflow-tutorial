@@ -37,10 +37,10 @@ Single-file structure: `app.py` at repository root + `data/sales-data.csv` (pre-
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T004 Implement `load_data()` function in `app.py` that reads `data/sales-data.csv` with pandas, parses the `date` column as datetime, decorates with `@st.cache_data`, and returns a DataFrame
-- [ ] T005 Add null/empty data guard in `app.py`: after `load_data()` call, if DataFrame is empty display `st.error("No sales data found. Please check that data/sales-data.csv is present and contains records.")` and `st.stop()`
-- [ ] T006 Add file-not-found error handler in `app.py`: wrap `load_data()` call in try/except, catch `FileNotFoundError` and display `st.error("Sales data file not found at data/sales-data.csv.")` and `st.stop()` — no raw traceback exposed (FR-010)
-- [ ] T007 Add null `total_amount` filtering in `load_data()` in `app.py`: drop rows where `total_amount` is null before returning DataFrame; display `st.info(f"{n} rows excluded due to missing amount values.")` if any rows are dropped
+- [x] T004 Implement `load_data()` function in `app.py` that reads `data/sales-data.csv` with pandas, parses the `date` column as datetime, decorates with `@st.cache_data`, and returns a DataFrame
+- [x] T005 Add null/empty data guard in `app.py`: after `load_data()` call, if DataFrame is empty display `st.error("No sales data found. Please check that data/sales-data.csv is present and contains records.")` and `st.stop()`
+- [x] T006 Add file-not-found error handler in `app.py`: wrap `load_data()` call in try/except, catch `FileNotFoundError` and display `st.error("Sales data file not found at data/sales-data.csv.")` and `st.stop()` — no raw traceback exposed (FR-010)
+- [x] T007 Add null `total_amount` filtering in `load_data()` in `app.py`: drop rows where `total_amount` is null before returning DataFrame; display `st.info(f"{n} rows excluded due to missing amount values.")` if any rows are dropped
 
 **Checkpoint**: Run `streamlit run app.py` — app launches, loads CSV, shows no errors with valid data. Ready for user story implementation.
 
