@@ -87,11 +87,11 @@ Single-file structure: `app.py` at repository root + `data/sales-data.csv` (pre-
 
 ### Implementation for User Story 3
 
-- [ ] T015 [P] [US3] Compute category revenue in `app.py`: `cat = df.groupby("category")["total_amount"].sum().reset_index().sort_values("total_amount", ascending=False)`
-- [ ] T016 [P] [US3] Compute region revenue in `app.py`: `reg = df.groupby("region")["total_amount"].sum().reset_index().sort_values("total_amount", ascending=False)`
-- [ ] T017 [US3] Create two-column layout in `app.py` with `col_cat, col_reg = st.columns(2)` for the bar charts (FR-007)
-- [ ] T018 [US3] Render "Sales by Category" bar chart in `col_cat` in `app.py` using `px.bar(cat, x="category", y="total_amount", title="Sales by Category", labels={"category": "Category", "total_amount": "Revenue ($)"})` sorted by value (FR-005)
-- [ ] T019 [US3] Render "Sales by Region" bar chart in `col_reg` in `app.py` using `px.bar(reg, x="region", y="total_amount", title="Sales by Region", labels={"region": "Region", "total_amount": "Revenue ($)"})` sorted by value (FR-006)
+- [x] T015 [P] [US3] Compute category revenue in `app.py`: `cat = df.groupby("category")["total_amount"].sum().reset_index().sort_values("total_amount", ascending=False)`
+- [x] T016 [P] [US3] Compute region revenue in `app.py`: `reg = df.groupby("region")["total_amount"].sum().reset_index().sort_values("total_amount", ascending=False)`
+- [x] T017 [US3] Create two-column layout in `app.py` with `col_cat, col_reg = st.columns(2)` for the bar charts (FR-007)
+- [x] T018 [US3] Render "Sales by Category" bar chart in `col_cat` in `app.py` using `px.bar(cat, x="category", y="total_amount", title="Sales by Category", labels={"category": "Category", "total_amount": "Revenue ($)"})` sorted by value (FR-005)
+- [x] T019 [US3] Render "Sales by Region" bar chart in `col_reg` in `app.py` using `px.bar(reg, x="region", y="total_amount", title="Sales by Region", labels={"region": "Region", "total_amount": "Revenue ($)"})` sorted by value (FR-006)
 
 **Checkpoint**: Both bar charts visible side by side, sorted correctly, with hover tooltips. All three user stories functional.
 

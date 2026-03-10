@@ -45,3 +45,26 @@ fig_trend = px.line(
     labels={"month": "Month", "total_amount": "Revenue ($)"},
 )
 st.plotly_chart(fig_trend, use_container_width=True)
+
+cat = df.groupby("category")["total_amount"].sum().reset_index().sort_values("total_amount", ascending=False)
+reg = df.groupby("region")["total_amount"].sum().reset_index().sort_values("total_amount", ascending=False)
+
+col_cat, col_reg = st.columns(2)
+
+fig_cat = px.bar(
+    cat,
+    x="category",
+    y="total_amount",
+    title="Sales by Category",
+    labels={"category": "Category", "total_amount": "Revenue ($)"},
+)
+col_cat.plotly_chart(fig_cat, use_container_width=True)
+
+fig_reg = px.bar(
+    reg,
+    x="region",
+    y="total_amount",
+    title="Sales by Region",
+    labels={"region": "Region", "total_amount": "Revenue ($)"},
+)
+col_reg.plotly_chart(fig_reg, use_container_width=True)
