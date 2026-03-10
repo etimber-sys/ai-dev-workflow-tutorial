@@ -103,7 +103,7 @@ Single-file structure: `app.py` at repository root + `data/sales-data.csv` (pre-
 
 - [ ] T020 Build Docker image: `docker build -t sales-dashboard .` and verify build completes without errors
 - [ ] T021 Run Docker container: `docker run -p 8501:8501 sales-dashboard` and open `http://localhost:8501` — verify all four views render correctly inside the container
-- [ ] T022 [P] Visual sign-off checklist in `app.py`: confirm page title, KPI values (~$650K–$700K / 482), 12-point trend line, 5-bar category chart, 4-bar region chart, side-by-side layout, interactive tooltips on all charts (SC-001 through SC-007)
+- [x] T022 [P] Visual sign-off checklist in `app.py`: confirm page title, KPI values (~$650K–$700K / 482), 12-point trend line, 5-bar category chart, 4-bar region chart, side-by-side layout, interactive tooltips on all charts (SC-001 through SC-007)
 
 ---
 
